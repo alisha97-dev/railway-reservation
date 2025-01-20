@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- custom css  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- css for the bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- css for the responsive -->
+    <link rel="stylesheet" href="css/responsive_style.css">
+
+    <!-- link for the fontawesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- link for the favicon -->
+    <link rel="icon" href="./assets/icons/favi-icon.png" type=" image/png">
+    <title>book tickets</title>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+    <!-- navbar start from here  -->
+
+    <header class="header-wrapper">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+                <a class="navbar-brand" href="home.html">
+                    <img src="../assets/my-logo.png" alt="logo" class="logo">
+
+
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <i class="fa-solid fa-bars "></i> -->
+                    <img src="./assets/icons/menu.png" alt="" class="menu">
+
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav menu-navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/services">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/bookings">Book tickets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/feedback">Feedback</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/signup">login/Sign up</a>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- navbar end here -->
+
+    <!-- login form start from there -->
+    <section class="bookings-wrapper wrapper">
+        <div class="container ">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-md-6 col-sm-12 mb-4">
+                    <div class="booking-form">
+                        <span class="heading">Book tickets</span>
+                        <form action="/bookings" method="post">
+
+                            <label for="from">From:</label>
+                            <select name="from" id="from">
+                                <option value="" selected disabled>Select city</option>
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Kolkata">Kolkata</option>
+                                <option value="Chennai">Chennai</option>
+                                <option value="Bengaluru">Bengaluru</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Ahmedabad">Ahmedabad</option>
+                                <option value="Pune">Pune</option>
+                                <option value="Jaipur">Jaipur</option>
+                                <option value="Lucknow">Lucknow</option>
+                                <option value="Kanpur">Kanpur</option>
+                                <option value="Nagpur">Nagpur</option>
+                                <option value="Indore">Indore</option>
+                                <option value="Patna">Patna</option>
+                                <option value="Bhopal">Bhopal</option>
+                                <option value="Ludhiana">Ludhiana</option>
+                                <option value="Agra">Agra</option>
+                                <option value="Varanasi">Varanasi</option>
+                                <option value="Kochi">Kochi</option>
+                                <option value="Coimbatore">Coimbatore</option>
+                                <option value="Visakhapatnam">Visakhapatnam</option>
+                            </select>
+                            <label for="to">To:</label>
+                            <select name="to" id="to">
+                                <option value="" selected disabled>Select city</option>
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Kolkata">Kolkata</option>
+                                <option value="Chennai">Chennai</option>
+                                <option value="Bengaluru">Bengaluru</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Ahmedabad">Ahmedabad</option>
+                                <option value="Pune">Pune</option>
+                                <option value="Jaipur">Jaipur</option>
+                                <option value="Lucknow">Lucknow</option>
+                                <option value="Kanpur">Kanpur</option>
+                                <option value="Nagpur">Nagpur</option>
+                                <option value="Indore">Indore</option>
+                                <option value="Patna">Patna</option>
+                                <option value="Bhopal">Bhopal</option>
+                                <option value="Ludhiana">Ludhiana</option>
+                                <option value="Agra">Agra</option>
+                                <option value="Varanasi">Varanasi</option>
+                                <option value="Kochi">Kochi</option>
+                                <option value="Coimbatore">Coimbatore
+                                </option>
+                                <option value="Visakhapatnam">Visakhapatnam</option>
+                            </select>
+                            <label for="date">Date:</label>
+                            <input type="date" name="date" id="date">
+                            <label for="passenger">Passengers:</label>
+                            <input type="number" name="passenger" id="passenger">
+                            <label for="travelClass">Class:</label>
+                            <select name="travelClass" id="travelClass">
+                                <option value="first class">First Class</option>
+                                <option value="second class">Second Class</option>
+                                <option value="sleeper">Sleeper</option>
+                                <option value="economic">Economic</option>
+                                <option value="business">Business</option>
+                                <option value="premium economic">Primium Economic</option>
+                                <option value="Air-Conditioned">Air-Conditioned</option>
+                                <option value="Unreserved">Unreserved</option>
+                            </select>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- login from ends here -->
+    <section id="contact" class="footer-wrapper wrapper">
+
+        <div class="container-fluid copyright-section mt-3 ">
+            <p class="p-0">Copyright <a href="#">BCA 2 STUDENTS</a> All Right Reserved</p>
+        </div>
+    </section>
+
+
+
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

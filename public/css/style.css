@@ -1,0 +1,712 @@
+/* imports */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+/* font-family: 'Roboto', sans-serif; */
+/* font-family: "Josefin Sans", sans-serif; */
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  /* background colors  */
+  --primary-color: #004caa;
+  --secondary-color: #51a400;
+  --bg-light-color: #3672bc;
+  --bg-dark: #666;
+  --bg-white: #fff;
+
+  /* Text Styles  */
+  --primary-font: "Roboto", serif;
+  --secondary-font: "Josefin Sans", sans-serif;
+  --primary-text: #004caa;
+  --secondary-text: #51a400;
+  --text-white: #fff;
+  --text-black: #222;
+  --text-gray: #666;
+  --text-light: #ddd;
+  --gradient: linear-gradient(
+    45deg,
+    #51a400,
+    #ffd18d,
+    #e69b59,
+    #aa6728
+      /* #845ec2,
+    #d65db1,
+    #ff6f91,
+    #ff9671,
+    #ffc67f,
+    #f9f871,
+    #cf1259,
+    #ab87ff,
+    #7f2ccb */
+  );
+}
+
+body {
+  font-family: var(--primary-font);
+  background-color: var(--bg-white);
+}
+
+a {
+  text-decoration: none !important;
+}
+::-webkit-scrollbar {
+  width: 0.375rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-light-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+}
+.wrapper {
+  padding: 6.34rem;
+}
+
+.main-btn {
+  display: inline-block;
+  /* border: 1px solid var(--bg-white);
+  color: var(--text-white);
+  text-align: center;
+  padding: 0.75rem 1.375rem;
+  font-size: 1rem;
+  background: transparent;
+  text-transform: capitalize;
+  border: 0.1875rem;
+  transition: all 0.3s ease-in-out; */
+
+  border: 1px solid var(--bg-black);
+  color: black;
+  background-color: var(--bg-white);
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: bolder;
+  text-transform: capitalize;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-btn:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--primary-color);
+  color: var(--text-white);
+}
+
+.secondary-btn {
+  /* background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  border-width: 1px;
+  color: var(--text-white); */
+  background-color: transparent;
+  border: 2px solid var(--bg-black);
+  color: var(--text-black);
+  padding: 8px 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.secondary-btn:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--bg-white);
+  border-width: 1px;
+  color: var(--text-white);
+}
+
+h1 {
+  font-size: 3.875rem;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+  color: var(--text-white);
+  font-family: var(--secondary-font);
+}
+
+h2 {
+  font-size: 2.875rem;
+  font-weight: 600;
+  color: var(--text-white);
+  font-family: var(--secondary-font);
+}
+h3 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: var(--text-white);
+  font-family: var(--secondary-font);
+}
+h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-black);
+  font-family: var(--secondary-font);
+}
+h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--primary-color);
+  margin-bottom: 0.9375rem;
+  font-family: var(--secondary-font);
+}
+h5 {
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--text-black);
+  margin-bottom: 0.9375rem;
+  text-transform: uppercase;
+  font-family: var(--secondary-font);
+}
+
+p {
+  font-size: 1rem;
+  color: var(--text-gray);
+  line-height: 1.625rem;
+}
+
+.card {
+  border-radius: 0.625rem;
+  background-color: var(--bg-white);
+  box-shadow: 0.5084rem 1.1419rem 2.5rem 0 rgba(0, 0, 0, 8%);
+  padding: 3.75rem 3.125rem 4.6875rem;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  border: o;
+}
+.card:hover {
+  transform: translateY(-0.75rem);
+  cursor: pointer;
+  border-color: transparent;
+}
+/* css for the animation */
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
+}
+/*
+===============================================
+            css for the navbar 
+=============================================== 
+*/
+.header-wrapper .navbar {
+  padding: 0.9375rem 0;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+
+  /* css for the blury navbar */
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(11.5px);
+  -webkit-backdrop-filter: blur(11.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.header-wrapper .navbar-toggler,
+.header-wrapper .navbar-toggler:focus {
+  border: 0;
+  color: var(--text-black);
+  line-height: 2;
+  box-shadow: none;
+}
+.header-wrapper .nav-item {
+  margin: 0 0.625rem;
+}
+.header-wrapper .nav-item .nav-link {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--primary-color);
+  display: inline-block;
+  font-family: var(--secondary-font);
+}
+.header-wrapper .nav-item .nav-link:hover,
+.header-wrapper .nav-item .nav-link:focus {
+  color: var(--secondary-text);
+}
+
+.header-wrapper .nav-item .nav-link.active {
+  color: var(--secondary-text);
+}
+.navbar.header-scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0.5084rem 1.1419rem 2.5rem 0 rgb(0, 0, 0/8%);
+  transition: all 0.3s ease-in-out;
+
+  /* css for the blur effect */
+  box-shadow: 0.5084rem 1.1419rem 2.5rem 0 rgb(0, 0, 0/8%);
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+.navbar-brand img {
+  height: 35px;
+  width: 100px;
+}
+
+.navbar-toggler-icon {
+  display: none;
+}
+
+.navbar-toggler .menu {
+  height: 30px;
+  width: 30px;
+  font-weight: bolder;
+}
+/*
+===============================================
+            css for the banner 
+=============================================== 
+*/
+
+.banner-wrapper {
+  /* background-image: var(--gradient);
+  background-size: 1000%;
+  animation: bg-animation 60s infinite alternate; */
+  background-image: linear-gradient(
+    90deg,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+
+  /* background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; */
+}
+
+.banner-wrapper p {
+  max-width: 80%;
+  color: var(--text-white);
+}
+
+.banner-wrapper .top-right-sec {
+  position: relative;
+  /* background-image: url("../images/top-banner-img/top-right-bg.png"); */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-wrapper .animate-img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  --webkit-transform: translateX(-50%);
+  transform: translateX(50%);
+  z-index: 22;
+}
+.banner-wrapper .animate-img img {
+  width: 500px;
+}
+
+.banner-wrapper .animate-img .aimg1 {
+  bottom: -10rem;
+  left: -10.6875rem;
+  position: absolute;
+}
+
+.banner-wrapper .animate-img .aimg2 {
+  margin-left: 5.5rem;
+}
+
+.banner-wrapper .animate-img .display-none {
+  display: none;
+}
+
+.home .card:hover {
+  transform: translateY(-0.625rem);
+  -webkit-transform: translateY(-0.625rem);
+}
+.home .icon-box {
+  text-align: center;
+  margin: 0 auto 2.5rem;
+}
+/*
+===============================================
+            css for the about section 
+=============================================== 
+*/
+.about-wrapper {
+  background-image: linear-gradient(
+    90deg,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+}
+.about-wrapper h2 {
+  color: var(--text-white);
+}
+
+.about-wrapper .card {
+  width: 80%;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-wrapper .about-station {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.about-wrapper .about-station:nth-child(1),
+.about-wrapper .about-station:nth-child(2) {
+  margin-bottom: 2.815rem;
+}
+
+.about-wrapper .about-station:nth-child(2),
+.about-wrapper .about-station:nth-child(4) {
+  padding-left: 3.75rem;
+}
+
+.about-wrapper .line-1,
+.about-wrapper .line-2 {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.0313rem;
+  height: 100%;
+  background-color: var(--bg-dark);
+}
+
+.about-wrapper .line-2 {
+  width: 100%;
+  height: 0.0625rem;
+}
+
+.about-wrapper .about-animate {
+  position: absolute;
+  bottom: 0;
+  left: -2.5rem;
+}
+
+.about-wrapper .about-img {
+  height: 600px;
+}
+/*
+===============================================
+            css for the services 
+=============================================== 
+*/
+
+.service-wrapper {
+  background-image: linear-gradient(
+    90deg,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+}
+
+.service-wrapper .card {
+  background-color: var(--bg-white);
+  border: 0.0625rem solid var(--bg-black);
+  box-shadow: none;
+  padding: 2.5rem;
+}
+.service-wrapper .card:hover {
+  transform: translateY(-0.75rem);
+  cursor: cell;
+  border-color: transparent;
+}
+
+.service-wrapper .card h4,
+.service-wrapper .card p {
+  color: var(--text-black);
+}
+
+.service-wrapper .icon-box {
+  margin-bottom: 1.875rem;
+}
+
+/*
+===============================================
+            css for the Gallery 
+=============================================== 
+*/
+.gallery-wrapper {
+  background-image: linear-gradient(
+    90deg,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-box {
+  width: 100px;
+  height: 500px;
+  margin: 10px;
+  border-radius: 50px;
+  background-image: url("../assets/gallery/station-1.jpg");
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.img-box:nth-child(2) {
+  background-image: url("../assets/gallery/station-3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.img-box:nth-child(3) {
+  background-image: url("../assets/gallery/station-4jpg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.img-box:nth-child(4) {
+  background-image: url("../assets/gallery/station-5.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.img-box:nth-child(5) {
+  background-image: url("../assets/gallery/station.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.img-box:nth-child(6) {
+  background-image: url("../assets/gallery/1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.img-box h3 {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  opacity: 0;
+  transition: bottom 0.5s, opacity 0.5s;
+}
+
+.img-box:hover {
+  width: 800px;
+  cursor: pointer;
+}
+
+.img-box:hover h3 {
+  opacity: 1;
+  bottom: 25px;
+}
+
+/*
+===============================================
+            css for the Testimonials 
+=============================================== 
+*/
+.testimonial-wrapper {
+  background-image: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: var(--text-white);
+}
+.testimonial-wrapper .card {
+  background-color: var(--bg-white);
+}
+
+.appointment-wrapper {
+  background-image: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*
+===============================================
+            css for the blog 
+=============================================== 
+*/
+
+.blog-wrapper .blog-content {
+  background-color: var(--bg-white);
+  color: var(--text-black);
+  padding: 2.5rem;
+}
+
+/*
+===============================================
+            css for the contact us 
+=============================================== 
+*/
+.footer-wrapper {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 2rem;
+  color: var(--text-black);
+}
+
+.footer-wrapper .copyright-section {
+  text-align: center;
+}
+
+.footer-wrapper .copyright-section p {
+  color: var(--text-black);
+  font-size: 1.5rem;
+}
+
+.footer-wrapper .copyright-section a {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/*
+===============================================
+            css for the login form us 
+=============================================== 
+*/
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-height: 650px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  padding: 20px;
+}
+.main .heading {
+  font-size: 1.5rem;
+  color: var(--text-white);
+  margin-bottom: 19px;
+  font-weight: bold;
+  display: block;
+}
+
+/*Login*/
+.form-label {
+  font-size: 1rem;
+  color: var(--text-white);
+}
+form {
+  padding: 10px;
+}
+.form-control {
+  background-color: black;
+}
+/* css for the bookings */
+.booking-form {
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 10px;
+  /* box-shadow: 7px 7px 10px 3px #24004628; */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.booking-form label {
+  color: var(--text-white);
+  font-size: 1rem;
+}
+
+.booking-form .heading {
+  font-size: 1.5rem;
+  color: var(--text-white);
+  margin-bottom: 19px;
+  font-weight: bold;
+  display: block;
+}
+
+.booking-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form label {
+  margin-bottom: 10px;
+}
+
+.booking-form input,
+.booking-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.booking-form input:focus,
+.booking-form textarea:focus {
+  outline: 2px solid var(--text-black);
+  transition: transform 0.3s ease-in-out;
+}
+
+.booking-form button[type="submit"] {
+  width: 100%;
+  height: 40px;
+  margin: 12px auto 10%;
+  color: #fff;
+  background: var(--secondary-color);
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  border: 1px solid var(--text-white);
+  cursor: pointer;
+}
+
+.booking-form select {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.booking-form button[type="submit"]:hover {
+  transform: translateY(-10px);
+}
+.bookings-wrapper {
+  background-image: var(--gradient);
+  background-size: 1000%;
+  animation: bg-animation 60s infinite alternate;
+}
+
+.login-wrapper {
+  background-image: var(--gradient);
+  background-size: 1000%;
+  animation: bg-animation 60s infinite alternate;
+}

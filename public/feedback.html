@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- custom css  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- css for the bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- css for the responsive -->
+    <link rel="stylesheet" href="css/responsive_style.css">
+
+    <!-- link for the fontawesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- link for the favicon -->
+    <link rel="icon" href="./assets/icons/favi-icon.png" type=" image/png">
+    <title>Feedback</title>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+    <!-- navbar start from here  -->
+
+    <header class="header-wrapper">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+                <a class="navbar-brand" href="home.html">
+                    <img src="../assets/my-logo.png" alt="logo" class="logo">
+
+
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <i class="fa-solid fa-bars "></i> -->
+                    <img src="./assets/icons/menu.png" alt="" class="menu">
+
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav menu-navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/services">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/bookings">Book tickets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/feedback">Feedback</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/signup">login/Sign up</a>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- navbar end here -->
+
+    <!-- login form start from there -->
+    <section class="login-wrapper wrapper">
+        <div class="container ">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-md-6 col-sm-12 mb-4">
+                    <div class="booking-form">
+                        <span class="heading">Feedack</span>
+                        <form action="/feedback" method="post">
+                            <label for="name">Name</label>
+                            <input type="text" required="" placeholder="Name" name="username">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required="" placeholder="Email">
+                            <label for="message">Message:</label>
+                            <textarea name="message" id="message" cols="30" rows="5" placeholder="Message"></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- login from ends here -->
+    <section id="contact" class="footer-wrapper wrapper mt-5">
+
+        <div class="container-fluid copyright-section ">
+            <p class="p-0">Copyright <a href="#">BCA 2 STUDENTS</a> All Right Reserved</p>
+        </div>
+    </section>
+
+
+
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
